@@ -8,3 +8,8 @@
 - [Глава 8: Liquidity Vault](03-liquidity-vault): create_vault и open_position. Итог: программа размещена, вызовы выполнены; total_deposited=0, deposited_amount=0.
 
 В каждом каталоге исходники, доказательства и reports с PDF/DOCX. Только Devnet. Ключи не публикуются. Практика выполнена через Python/solders; TypeScript/Helius и metadata не заявляются. Для vault выполнены облачная SBF-сборка и публичные транзакции, не локальные Anchor integration tests.
+
+
+## Обновление недели 8
+
+Актуальная работа по опубликованному шаблону преподавателя и трём расширениям находится в [04-week8-official](04-week8-official/). Предыдущий 03-liquidity-vault сохранён как ранняя самостоятельная реализация, не заменяет новый шаблон.

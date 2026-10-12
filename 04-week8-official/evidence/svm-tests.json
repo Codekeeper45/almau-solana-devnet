@@ -1,0 +1,133 @@
+[
+  {
+    "instruction": "initialize_vault",
+    "expected_failure": false,
+    "logs": [
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t invoke [1]",
+      "Program log: Instruction: InitializeVault",
+      "Program 11111111111111111111111111111111 invoke [2]",
+      "Program 11111111111111111111111111111111 success",
+      "Program 11111111111111111111111111111111 invoke [2]",
+      "Program 11111111111111111111111111111111 success",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 235 of 180369 compute units",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+      "Program 11111111111111111111111111111111 invoke [2]",
+      "Program 11111111111111111111111111111111 success",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 201 of 167746 compute units",
+      "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+      "Program log: Vault initialized for mint: FJHoAL4MkV1XRTo1jxoj5qJtpvi9jPPXZyA6u1yU3bCK",
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t consumed 48018 of 200000 compute units",
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t success"
+    ]
+  },
+  {
+    "instruction": "create_user_card",
+    "expected_failure": false,
+    "logs": [
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t invoke [1]",
+      "Program log: Instruction: CreateUserCard",
+      "Program 11111111111111111111111111111111 invoke [2]",
+      "Program 11111111111111111111111111111111 success",
+      "Program log: User card created for: BLHBSH1pwkWH5T7hhK4JmVXQG7U43F3otZmBHaKMVrwV",
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t consumed 26309 of 200000 compute units",
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t success"
+    ]
+  },
+  {
+    "instruction": "create_user_card",
+    "expected_failure": true,
+    "logs": [
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t invoke [1]",
+      "Program log: Instruction: CreateUserCard",
+      "Program 11111111111111111111111111111111 invoke [2]",
+      "Allocate: account Address { address: CVEsfztrUGmELyxHz7TSm3dTVnCLBWnX91aatZgUjm1P, base: None } already in use",
+      "Program 11111111111111111111111111111111 failed: custom program error: 0x0",
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t consumed 9213 of 200000 compute units",
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t failed: custom program error: 0x0"
+    ]
+  },
+  {
+    "instruction": "set_paused",
+    "expected_failure": true,
+    "logs": [
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t invoke [1]",
+      "Program log: Instruction: SetPaused",
+      "Program log: AnchorError caused by account: vault_state. Error Code: ConstraintHasOne. Error Number: 2001. Error Message: A has one constraint was violated.",
+      "Program log: Left:",
+      "Program log: 53iDd1gfQA8PeyhgJRKuG45t1Uxz6NjBfE4dg65nLZPd",
+      "Program log: Right:",
+      "Program log: BLHBSH1pwkWH5T7hhK4JmVXQG7U43F3otZmBHaKMVrwV",
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t consumed 6014 of 200000 compute units",
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t failed: custom program error: 0x7d1"
+    ]
+  },
+  {
+    "instruction": "close_user_card",
+    "expected_failure": true,
+    "logs": [
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t invoke [1]",
+      "Program log: Instruction: CloseUserCard",
+      "Program log: AnchorError caused by account: user_card. Error Code: ConstraintSeeds. Error Number: 2006. Error Message: A seeds constraint was violated.",
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t consumed 7861 of 200000 compute units",
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t failed: custom program error: 0x7d6"
+    ]
+  },
+  {
+    "instruction": "set_paused",
+    "expected_failure": false,
+    "logs": [
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t invoke [1]",
+      "Program log: Instruction: SetPaused",
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t consumed 3933 of 200000 compute units",
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t success"
+    ]
+  },
+  {
+    "instruction": "close_user_card",
+    "expected_failure": false,
+    "logs": [
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t invoke [1]",
+      "Program log: Instruction: CloseUserCard",
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t consumed 6441 of 200000 compute units",
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t success"
+    ]
+  },
+  {
+    "instruction": "create_user_card",
+    "expected_failure": true,
+    "logs": [
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t invoke [1]",
+      "Program log: Instruction: CreateUserCard",
+      "Program 11111111111111111111111111111111 invoke [2]",
+      "Program 11111111111111111111111111111111 success",
+      "Program log: AnchorError thrown in 509e7ff4-be6b-41cc-89e9-fdf39a7148a7/src/lib.rs:28. Error Code: Paused. Error Number: 6000. Error Message: Vault is paused.",
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t consumed 15626 of 200000 compute units",
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t failed: custom program error: 0x1770"
+    ]
+  },
+  {
+    "instruction": "set_paused",
+    "expected_failure": false,
+    "logs": [
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t invoke [1]",
+      "Program log: Instruction: SetPaused",
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t consumed 3933 of 200000 compute units",
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t success"
+    ]
+  },
+  {
+    "instruction": "create_user_card",
+    "expected_failure": false,
+    "logs": [
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t invoke [1]",
+      "Program log: Instruction: CreateUserCard",
+      "Program 11111111111111111111111111111111 invoke [2]",
+      "Program 11111111111111111111111111111111 success",
+      "Program log: User card created for: BLHBSH1pwkWH5T7hhK4JmVXQG7U43F3otZmBHaKMVrwV",
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t consumed 26309 of 200000 compute units",
+      "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t success"
+    ]
+  }
+]

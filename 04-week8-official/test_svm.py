@@ -1,0 +1,13 @@
+import hashlib,struct,json
+from pathlib import Path
+from solders.litesvm import LiteSVM
+from solders.keypair import Keypair
+from solders.pubkey import Pubkey as P
+from solders.instruction import Instruction,AccountMeta as M
+from solders.transaction import Transaction
+from solders.account import Account
+r=Path(__file__).parent;svm=LiteSVM();a=Keypair();u=Keypair();svm.airdrop(a.pubkey(),10**10);svm.airdrop(u.pubkey(),10**9);p=P.from_string(json.loads((r/'evidence/manifest.json').read_text())['program_id']);svm.add_program(p,(r/'evidence/vault.so').read_bytes());mint=Keypair().pubkey();token=P.from_string('TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA');d=struct.pack('<I',1)+bytes(a.pubkey())+struct.pack('<QBBI',0,6,1,0)+bytes(32);svm.set_account(mint,Account(10000000,d,token));v=P.find_program_address([b'vault',bytes(mint)],p)[0];t=P.find_program_address([b'vault_tokens',bytes(mint)],p)[0];s=P.find_program_address([b'share_mint',bytes(mint)],p)[0];card=P.find_program_address([b'user_card',bytes(v),bytes(u.pubkey())],p)[0];checks=[]
+def run(n,ac,signers,data=b'',fail=False):
+ ix=Instruction(p,hashlib.sha256(('global:'+n).encode()).digest()[:8]+data,ac);tx=Transaction.new_signed_with_payer([ix],a.pubkey(),signers,svm.latest_blockhash());z=svm.send_transaction(tx);assert hasattr(z,'err')==fail,str(z);checks.append({'instruction':n,'expected_failure':fail,'logs':z.meta().logs() if fail else z.logs()});svm.expire_blockhash()
+run('initialize_vault',[M(v,False,True),M(t,False,True),M(s,False,True),M(mint,False,False),M(a.pubkey(),True,True),M(token,False,False),M(P.default(),False,False),M(P.from_string('SysvarRent111111111111111111111111111111111'),False,False)],[a]);ac=[M(v,False,False),M(card,False,True),M(u.pubkey(),True,True),M(P.default(),False,False)];run('create_user_card',ac,[a,u]);assert len(svm.get_account(card).data)==81
+run('create_user_card',ac,[a,u],fail=True);run('set_paused',[M(v,False,True),M(u.pubkey(),True,False)],[a,u],b'\x01',True);run('close_user_card',[M(v,False,False),M(card,False,True),M(a.pubkey(),True,True)],[a],fail=True);run('set_paused',[M(v,False,True),M(a.pubkey(),True,False)],[a],b'\x01');amount=svm.get_account(card).lamports;before=svm.get_balance(u.pubkey());run('close_user_card',[M(v,False,False),M(card,False,True),M(u.pubkey(),True,True)],[a,u]);assert svm.get_account(card) is None;assert svm.get_balance(u.pubkey())-before==amount;run('create_user_card',ac,[a,u],fail=True);run('set_paused',[M(v,False,True),M(a.pubkey(),True,False)],[a],b'\x00');run('create_user_card',ac,[a,u]);(r/'evidence/svm-tests.json').write_text(json.dumps(checks,indent=2));print('SVM VERIFIED',len(checks),'scenarios and exact rent return')

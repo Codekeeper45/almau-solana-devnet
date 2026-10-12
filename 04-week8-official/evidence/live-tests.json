@@ -1,0 +1,120 @@
+{
+  "program": "G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t",
+  "vault": "6xHhvDf4Yo1L9nNbCGaXmYqRuh2e2CEQA3ZATBZ7WidT",
+  "share_mint": "BdFsb1LXum7BRqHUj2wUtzEKaZHrxQNeVdiHLtSxuBF4",
+  "token_vault": "GkRiUzMaWe3x8AxQXKGnGxuYjnsqa8KTbBjmM29qK4i2",
+  "card": "2NjzefFfRAJFH8tCePXftmRyAnekEKH1LCjjdJYv9CEm",
+  "user": "G4SQ2EieWfimK49zVU4pZEVQ8TFMKL5pi9THUWtnTgfX",
+  "created_at": 1791812993,
+  "rent_returned": 1061720,
+  "checks": [
+    {
+      "instruction": "initialize_vault",
+      "signature": "4v156otkSKxdeUGAiwBXx93hkCNNPw2wu1ViztoZ1FR87ydkDTz2PhKA9Wf7ETCJNcwpZ6kiJ8bTQzSmH9nqrNdW"
+    },
+    {
+      "instruction": "create_user_card",
+      "signature": "4QqNo9KnC7w5nq7o57BumT77MsBQ1CMykbGRyhgDpFs4JsTkbE6oirTnvKMyhMbF9DKE4VyVHpLtxfcm4A5hPX3q"
+    },
+    {
+      "negative": "create_user_card",
+      "err": {
+        "InstructionError": [
+          0,
+          {
+            "Custom": 0
+          }
+        ]
+      },
+      "logs": [
+        "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t invoke [1]",
+        "Program log: Instruction: CreateUserCard",
+        "Program 11111111111111111111111111111111 invoke [2]",
+        "Allocate: account Address { address: 2NjzefFfRAJFH8tCePXftmRyAnekEKH1LCjjdJYv9CEm, base: None } already in use",
+        "Program 11111111111111111111111111111111 failed: custom program error: 0x0",
+        "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t consumed 6213 of 200000 compute units",
+        "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t failed: custom program error: 0x0"
+      ]
+    },
+    {
+      "negative": "set_paused",
+      "err": {
+        "InstructionError": [
+          0,
+          {
+            "Custom": 2001
+          }
+        ]
+      },
+      "logs": [
+        "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t invoke [1]",
+        "Program log: Instruction: SetPaused",
+        "Program log: AnchorError caused by account: vault_state. Error Code: ConstraintHasOne. Error Number: 2001. Error Message: A has one constraint was violated.",
+        "Program log: Left:",
+        "Program log: 2SzJ2PSuhnQsenfvHK4DhQHibjVL2d68fwdHAMwxJ7pL",
+        "Program log: Right:",
+        "Program log: G4SQ2EieWfimK49zVU4pZEVQ8TFMKL5pi9THUWtnTgfX",
+        "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t consumed 6014 of 200000 compute units",
+        "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t failed: custom program error: 0x7d1"
+      ]
+    },
+    {
+      "negative": "close_user_card",
+      "err": {
+        "InstructionError": [
+          0,
+          {
+            "Custom": 2006
+          }
+        ]
+      },
+      "logs": [
+        "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t invoke [1]",
+        "Program log: Instruction: CloseUserCard",
+        "Program log: AnchorError caused by account: user_card. Error Code: ConstraintSeeds. Error Number: 2006. Error Message: A seeds constraint was violated.",
+        "Program log: Left:",
+        "Program log: 2NjzefFfRAJFH8tCePXftmRyAnekEKH1LCjjdJYv9CEm",
+        "Program log: Right:",
+        "Program log: H9DhJfgwTXNsFBx2cZ6pgSxV2x2cfdVa1t8xVR3AypKR",
+        "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t consumed 8583 of 200000 compute units",
+        "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t failed: custom program error: 0x7d6"
+      ]
+    },
+    {
+      "instruction": "set_paused",
+      "signature": "3euF38Ga5y2KLoFBSvTxecUcVqt4C1GsL7nrys6cpdLRnMGYy9bSAhzA7SAzrcLWBnuZUzPqnz5kXnJvNgpjNswy"
+    },
+    {
+      "instruction": "close_user_card",
+      "signature": "5Sp45Cy63soABJ6cXJYn3qH2V6ZbUamVGgMtrvva3exCTWbiEk9VGW5qBtRzGw1BrxUsRo5oB1hSHrV2XGG8bG5k"
+    },
+    {
+      "negative": "create_user_card",
+      "err": {
+        "InstructionError": [
+          0,
+          {
+            "Custom": 6000
+          }
+        ]
+      },
+      "logs": [
+        "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t invoke [1]",
+        "Program log: Instruction: CreateUserCard",
+        "Program 11111111111111111111111111111111 invoke [2]",
+        "Program 11111111111111111111111111111111 success",
+        "Program log: AnchorError thrown in 509e7ff4-be6b-41cc-89e9-fdf39a7148a7/src/lib.rs:28. Error Code: Paused. Error Number: 6000. Error Message: Vault is paused.",
+        "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t consumed 12626 of 200000 compute units",
+        "Program G3EE49SHxtdRFMDvzAyB9aWjoLwzBkt62EVhnRzhxw9t failed: custom program error: 0x1770"
+      ]
+    },
+    {
+      "instruction": "set_paused",
+      "signature": "4oXttNaNfpx2zkWg8VpK9A9FLTsdpHDbrTvx5XgSLn8HYktoeTvMTNPJF7zHrc6ira2yAd5BjhQ8zpu74Vy1R8fw"
+    },
+    {
+      "instruction": "create_user_card",
+      "signature": "HZkGHLopbBnPfJqJTnm5KrykF4X5JybUSXm1rqF7GP3k26XRj55pWP6bpEux8iSzx72Ps1CuQo9xrovTMiMNcJQ"
+    }
+  ]
+}
