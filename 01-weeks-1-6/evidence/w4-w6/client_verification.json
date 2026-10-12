@@ -1,0 +1,10 @@
+{
+  "mode": "local_client_and_unit_tests_only",
+  "student_authority": "2SzJ2PSuhnQsenfvHK4DhQHibjVL2d68fwdHAMwxJ7pL",
+  "counter_program_id": "Fg6PaFpoGXkYsidMpWxTWqkZ8q7kL6K2f3d9c8P4v1A",
+  "counter_increment_discriminator_hex": "0b12680968ae3b21",
+  "profile_program_id": "Fg6PaFpoGXkYsidMpWxTWqkZ8q7kL6K2f3d9c8P4v1B",
+  "derived_profile_pda": "7BwyGhDDWTV6PEjm1CuMZ6jZjtB7oGLT8PV9t7vuGqJL",
+  "derived_profile_bump": 255,
+  "create_profile_instruction_hex": "e1cdea8f11ba32dc07000000656d69725f64730e000000416c6d6155203320636f75727365"
+}

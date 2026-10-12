@@ -1,0 +1,12 @@
+{
+  "rpc": "https://api.devnet.solana.com",
+  "student": "2SzJ2PSuhnQsenfvHK4DhQHibjVL2d68fwdHAMwxJ7pL",
+  "recipient": "AK3KTtGPrAXY769tLueYsFucMgRs7ZYpGHsub6cA6ZF1",
+  "balance": {
+    "context": {
+      "apiVersion": "4.4.0-beta.0",
+      "slot": 510169097
+    },
+    "value": 0
+  }
+}

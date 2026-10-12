@@ -1,0 +1,31 @@
+{
+  "balance": {
+    "amount": "9650000000",
+    "decimals": 6,
+    "uiAmount": 9650.0,
+    "uiAmountString": "9650"
+  },
+  "supply": {
+    "amount": "9950000000",
+    "decimals": 6,
+    "uiAmount": 9950.0,
+    "uiAmountString": "9950"
+  },
+  "recipients": [
+    {
+      "recipient": "8sJ49ZVUw8QXfxogwHRkXC1nfm6ZT7vrTWwq6xztBkVV",
+      "signature": "2pMVPGVwFUZppkmZFXvZuRbwnyGvHWQ5vwfqdUfGwPDoEchqChvu8JxvBqA1cXxmVJFvDagKipESixVtDgDb46sm",
+      "amount": 100
+    },
+    {
+      "recipient": "DRx11A6yZPoJXvFmwbu9posT1RN5GmW4f6J25PJADHbv",
+      "signature": "251HzPCTEXbAZFMcLkWMAzzZ8XyeLHVKWJFzwsmd5pBK2iXn5CnSdvuKkZ7kQSW19ZLnQkv6grXED3Dkf1HU6PRC",
+      "amount": 100
+    },
+    {
+      "recipient": "HMwMf283jQjEPafskVa8kLSTANpDHQW8MmTp2C9UtzYX",
+      "signature": "3gvqerjTnctGxwVS8vYUi1DAVndYJCjSKPsjHJuRZwU8x46HAVVynSJ59ZEAcz372KamexxHaxCoaJWm8w6f9Whh",
+      "amount": 100
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "cluster": "devnet",
+  "mint": "HzQULeq72G2RQp1wFBk9T3TNvCZ6wBBP3KrqQZVYxgfe",
+  "ata": "9SLvRkTG9fPtAyakHUAhR2m5kmHoopssivuHQT9TwDpu",
+  "authority": "2SzJ2PSuhnQsenfvHK4DhQHibjVL2d68fwdHAMwxJ7pL",
+  "decimals": 6,
+  "supply": {
+    "context": {
+      "apiVersion": "4.4.0-beta.0",
+      "slot": 510195087
+    },
+    "value": {
+      "amount": "9950000000",
+      "decimals": 6,
+      "uiAmount": 9950.0,
+      "uiAmountString": "9950"
+    }
+  },
+  "balance": {
+    "context": {
+      "apiVersion": "4.4.0-beta.0",
+      "slot": 510195089
+    },
+    "value": {
+      "amount": "9950000000",
+      "decimals": 6,
+      "uiAmount": 9950.0,
+      "uiAmountString": "9950"
+    }
+  },
+  "pending": "Three real classmates public wallet addresses required. No substitutes.",
+  "memo_recipient": "AK3KTtGPrAXY769tLueYsFucMgRs7ZYpGHsub6cA6ZF1",
+  "memo_recipient_kind": "existing own test recipient, not classmate"
+}

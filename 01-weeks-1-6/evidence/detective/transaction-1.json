@@ -1,0 +1,255 @@
+{
+  "signature": "XV7fffZmLkGh8Vr4AvVdh9PcZkqtFniScaro8c5uYBoo8QGgmi1HMFUs3ubGTjuXgDdtEMdKnXgHRpLYhHbDdVU",
+  "provenance": "Public third-party transaction for analysis only. NOT performed by student.",
+  "result": {
+    "blockTime": 1791785714,
+    "meta": {
+      "computeUnitsConsumed": 71856,
+      "costUnits": 73587,
+      "err": null,
+      "fee": 35000,
+      "innerInstructions": [],
+      "logMessages": [
+        "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+        "Program ComputeBudget111111111111111111111111111111 success",
+        "Program ComputeBudget111111111111111111111111111111 invoke [1]",
+        "Program ComputeBudget111111111111111111111111111111 success",
+        "Program MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr invoke [1]",
+        "Program log: Signed by 6a1wxRdkWZKPHqSJvEEwcd9KywCEtrSnmswHDhNsBNqd",
+        "Program log: Memo (len 131): \"HELM_AUTH|v3|open_trade|will-harry-kane-win-the-2026-ballon-dor|1791785714313|yes|buy|market|0|adf51399-edcb-4bd9-b260-bc3812a48f59\"",
+        "Program MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr consumed 61205 of 119700 compute units",
+        "Program MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr success",
+        "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [1]",
+        "Program log: CreateIdempotent",
+        "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 5838 of 58495 compute units",
+        "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+        "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL invoke [1]",
+        "Program log: CreateIdempotent",
+        "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 4437 of 52657 compute units",
+        "Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [1]",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 76 of 48220 compute units",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success"
+      ],
+      "postBalances": [
+        45332306416,
+        2040280,
+        1855569,
+        1,
+        357432926606,
+        1462600,
+        5938070540,
+        1,
+        41509609334,
+        20369267856
+      ],
+      "postTokenBalances": [
+        {
+          "accountIndex": 1,
+          "mint": "4wMp7FQJrSwHXJ92kKRd9X2LQE1Tw7L4beT7fBLgjY4y",
+          "owner": "2VyJghegXGD7rPxS5HzemSWWjv64N8v8bThJoMRmTeEs",
+          "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "uiTokenAmount": {
+            "amount": "5420165557383860",
+            "decimals": 6,
+            "uiAmount": 5420165557.38386,
+            "uiAmountString": "5420165557.38386"
+          }
+        },
+        {
+          "accountIndex": 2,
+          "mint": "4wMp7FQJrSwHXJ92kKRd9X2LQE1Tw7L4beT7fBLgjY4y",
+          "owner": "6a1wxRdkWZKPHqSJvEEwcd9KywCEtrSnmswHDhNsBNqd",
+          "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "uiTokenAmount": {
+            "amount": "22984274293688",
+            "decimals": 6,
+            "uiAmount": 22984274.293688,
+            "uiAmountString": "22984274.293688"
+          }
+        }
+      ],
+      "preBalances": [
+        45332341416,
+        2040280,
+        1855569,
+        1,
+        357432926606,
+        1462600,
+        5938070540,
+        1,
+        41509609334,
+        20369267856
+      ],
+      "preTokenBalances": [
+        {
+          "accountIndex": 1,
+          "mint": "4wMp7FQJrSwHXJ92kKRd9X2LQE1Tw7L4beT7fBLgjY4y",
+          "owner": "2VyJghegXGD7rPxS5HzemSWWjv64N8v8bThJoMRmTeEs",
+          "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "uiTokenAmount": {
+            "amount": "5420164557383860",
+            "decimals": 6,
+            "uiAmount": 5420164557.38386,
+            "uiAmountString": "5420164557.38386"
+          }
+        },
+        {
+          "accountIndex": 2,
+          "mint": "4wMp7FQJrSwHXJ92kKRd9X2LQE1Tw7L4beT7fBLgjY4y",
+          "owner": "6a1wxRdkWZKPHqSJvEEwcd9KywCEtrSnmswHDhNsBNqd",
+          "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+          "uiTokenAmount": {
+            "amount": "22985274293688",
+            "decimals": 6,
+            "uiAmount": 22985274.293688,
+            "uiAmountString": "22985274.293688"
+          }
+        }
+      ],
+      "rewards": [],
+      "status": {
+        "Ok": null
+      }
+    },
+    "slot": 510170106,
+    "transaction": {
+      "message": {
+        "accountKeys": [
+          {
+            "pubkey": "6a1wxRdkWZKPHqSJvEEwcd9KywCEtrSnmswHDhNsBNqd",
+            "signer": true,
+            "source": "transaction",
+            "writable": true
+          },
+          {
+            "pubkey": "55Xoy6LMWPpc2DZNUYZPgf3PVhpZKEd6QFeUnqiAAmDQ",
+            "signer": false,
+            "source": "transaction",
+            "writable": true
+          },
+          {
+            "pubkey": "Expy4H7CJb6SXzL66oAwN1TSU1uYu7yCGUrSvJE2TCA6",
+            "signer": false,
+            "source": "transaction",
+            "writable": true
+          },
+          {
+            "pubkey": "11111111111111111111111111111111",
+            "signer": false,
+            "source": "transaction",
+            "writable": false
+          },
+          {
+            "pubkey": "2VyJghegXGD7rPxS5HzemSWWjv64N8v8bThJoMRmTeEs",
+            "signer": false,
+            "source": "transaction",
+            "writable": false
+          },
+          {
+            "pubkey": "4wMp7FQJrSwHXJ92kKRd9X2LQE1Tw7L4beT7fBLgjY4y",
+            "signer": false,
+            "source": "transaction",
+            "writable": false
+          },
+          {
+            "pubkey": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+            "signer": false,
+            "source": "transaction",
+            "writable": false
+          },
+          {
+            "pubkey": "ComputeBudget111111111111111111111111111111",
+            "signer": false,
+            "source": "transaction",
+            "writable": false
+          },
+          {
+            "pubkey": "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr",
+            "signer": false,
+            "source": "transaction",
+            "writable": false
+          },
+          {
+            "pubkey": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+            "signer": false,
+            "source": "transaction",
+            "writable": false
+          }
+        ],
+        "instructions": [
+          {
+            "accounts": [],
+            "data": "K1wVZZ",
+            "programId": "ComputeBudget111111111111111111111111111111",
+            "stackHeight": 1
+          },
+          {
+            "accounts": [],
+            "data": "3dgRf8s6ueV5",
+            "programId": "ComputeBudget111111111111111111111111111111",
+            "stackHeight": 1
+          },
+          {
+            "parsed": "HELM_AUTH|v3|open_trade|will-harry-kane-win-the-2026-ballon-dor|1791785714313|yes|buy|market|0|adf51399-edcb-4bd9-b260-bc3812a48f59",
+            "program": "spl-memo",
+            "programId": "MemoSq4gqABAXKb96qnH8TysNcWxMyWCqXgDLGmfcHr",
+            "stackHeight": 1
+          },
+          {
+            "parsed": {
+              "info": {
+                "account": "Expy4H7CJb6SXzL66oAwN1TSU1uYu7yCGUrSvJE2TCA6",
+                "mint": "4wMp7FQJrSwHXJ92kKRd9X2LQE1Tw7L4beT7fBLgjY4y",
+                "source": "6a1wxRdkWZKPHqSJvEEwcd9KywCEtrSnmswHDhNsBNqd",
+                "systemProgram": "11111111111111111111111111111111",
+                "tokenProgram": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+                "wallet": "6a1wxRdkWZKPHqSJvEEwcd9KywCEtrSnmswHDhNsBNqd"
+              },
+              "type": "createIdempotent"
+            },
+            "program": "spl-associated-token-account",
+            "programId": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+            "stackHeight": 1
+          },
+          {
+            "parsed": {
+              "info": {
+                "account": "55Xoy6LMWPpc2DZNUYZPgf3PVhpZKEd6QFeUnqiAAmDQ",
+                "mint": "4wMp7FQJrSwHXJ92kKRd9X2LQE1Tw7L4beT7fBLgjY4y",
+                "source": "6a1wxRdkWZKPHqSJvEEwcd9KywCEtrSnmswHDhNsBNqd",
+                "systemProgram": "11111111111111111111111111111111",
+                "tokenProgram": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+                "wallet": "2VyJghegXGD7rPxS5HzemSWWjv64N8v8bThJoMRmTeEs"
+              },
+              "type": "createIdempotent"
+            },
+            "program": "spl-associated-token-account",
+            "programId": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL",
+            "stackHeight": 1
+          },
+          {
+            "parsed": {
+              "info": {
+                "amount": "1000000000",
+                "authority": "6a1wxRdkWZKPHqSJvEEwcd9KywCEtrSnmswHDhNsBNqd",
+                "destination": "55Xoy6LMWPpc2DZNUYZPgf3PVhpZKEd6QFeUnqiAAmDQ",
+                "source": "Expy4H7CJb6SXzL66oAwN1TSU1uYu7yCGUrSvJE2TCA6"
+              },
+              "type": "transfer"
+            },
+            "program": "spl-token",
+            "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+            "stackHeight": 1
+          }
+        ],
+        "recentBlockhash": "CpzMwgnnvBLWmXMzRUVJ3EujiCJrmGZtzRhDBEYAhPJC"
+      },
+      "signatures": [
+        "XV7fffZmLkGh8Vr4AvVdh9PcZkqtFniScaro8c5uYBoo8QGgmi1HMFUs3ubGTjuXgDdtEMdKnXgHRpLYhHbDdVU"
+      ]
+    },
+    "transactionIndex": 4,
+    "version": "legacy"
+  }
+}
