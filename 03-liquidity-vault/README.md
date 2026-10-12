@@ -39,6 +39,17 @@ admin
 
 Seed-строки выбраны для этой реализации. Работа подготовлена по методичке; обещанный преподавателем шаблон на момент подготовки ещё не опубликован в просмотренных сообщениях.
 
+## Аккаунты и транзакции в Explorer
+
+Все ссылки открываются в Devnet:
+- [Конфигурация](https://explorer.solana.com/address/oAKzYu7gjC1Z1tnWjUaPapqwwgjeQQZni6xQKmGBUSc?cluster=devnet).
+- [Share mint](https://explorer.solana.com/address/DGCwHptgAesej6svQ1zSx5M5jcwqZb2HzWnR2KQmo22M?cluster=devnet).
+- [Token vault](https://explorer.solana.com/address/8QYhnqGPeEtGCZK5PT19iA9tVcLPgowtajJmf2V1iAW5?cluster=devnet).
+- [Позиция пользователя](https://explorer.solana.com/address/EHoRH8CufQLsSA8T6ZgyWZh6h7hFBzeMF4Dm216yerGY?cluster=devnet).
+- Authority PDA: `2tQwvkVuGRrhQ39RxCyprxJojBaxaKa5PKUHgeKzR4xc`. Это адрес полномочий, отдельный аккаунт с данными для него не создаётся.
+- [create_vault](https://explorer.solana.com/tx/2RU92NFQcx9jf6vZWzZazS1tfH8sLRgUNi8H9afVg5rGas1NusKmtnNQ5fj61PhxgZpxp95jGhRiqiD4DVSdMLZN?cluster=devnet).
+- [open_position](https://explorer.solana.com/tx/4RU1khBpwDjVN5pi2vBDT5P1cK2PQgESecHtFTxZcu5gDVXYCWps3U1MYv9gbm2hzWFa9ca3jAnYuYvBnQkpkHcB?cluster=devnet).
+
 ## Документы
 
 PDF и DOCX находятся в `reports/`. Ключи кошелька и секреты не публикуются. Только тестовая Devnet, без реальных средств. Повторное выполнение create_vault/open_position на тех же PDA завершится ошибкой уже существующего аккаунта, поэтому для проверки использованы сохранённые транзакции и чтение RPC.
