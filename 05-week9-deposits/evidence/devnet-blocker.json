@@ -1,0 +1,13 @@
+{
+  "status": "BLOCKED_NOT_DEPLOYED",
+  "rpc": "https://api.devnet.solana.com",
+  "payer": "EhzvmmwTRiSbuBy8So5Vj1boihWQXa2FmPkgYNXqHopn",
+  "balance_lamports": 0,
+  "balance_verified": true,
+  "target_program_id": "EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu",
+  "target_program_private_key_available": false,
+  "existing_evidence_vault_so_valid_for_target": false,
+  "reason": "Zero Devnet payer balance; existing SBF was built for a different ID. New program keypair and rebuild are required. No transactions sent, no SOL purchased, no mainnet used.",
+  "local_regression": "test_svm.py PASS: 19 scenarios in LiteSVM; this is not public Devnet evidence.",
+  "request_airdrop": "Not called, per instruction to rely on faucet and avoid spending funds."
+}

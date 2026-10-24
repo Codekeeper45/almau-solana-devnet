@@ -1,0 +1,12 @@
+{
+  "name": "AlmaU Week 7 Demo Token",
+  "symbol": "AW7",
+  "description": "Educational SPL token metadata demonstration for Solana Devnet. No monetary value.",
+  "image": "",
+  "external_url": "",
+  "attributes": [
+    {"trait_type": "Course", "value": "Solana Week 7"},
+    {"trait_type": "Network", "value": "Devnet"}
+  ],
+  "properties": {"category": "image", "files": []}
+}
