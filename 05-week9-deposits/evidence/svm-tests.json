@@ -1,0 +1,292 @@
+{
+  "environment": "LiteSVM with compiled SBF and real SPL Token CPI, NOT public Devnet",
+  "checks": [
+    {
+      "instruction": "initialize_vault",
+      "expected_error": null,
+      "logs": [
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu invoke [1]",
+        "Program log: Instruction: InitializeVault",
+        "Program 11111111111111111111111111111111 invoke [2]",
+        "Program 11111111111111111111111111111111 success",
+        "Program 11111111111111111111111111111111 invoke [2]",
+        "Program 11111111111111111111111111111111 success",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 235 of 180026 compute units",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+        "Program 11111111111111111111111111111111 invoke [2]",
+        "Program 11111111111111111111111111111111 success",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 201 of 170404 compute units",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+        "Program log: Vault initialized for mint: 6tDRwvzpuV4Wxh44kpfR8j25HTAEmhijo3VEtCSyDfun",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu consumed 45744 of 200000 compute units",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu success"
+      ]
+    },
+    {
+      "instruction": "create_user_card",
+      "expected_error": null,
+      "logs": [
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu invoke [1]",
+        "Program log: Instruction: CreateUserCard",
+        "Program 11111111111111111111111111111111 invoke [2]",
+        "Program 11111111111111111111111111111111 success",
+        "Program log: User card created for: 5X9y39Zh1EsRub8HZpx9odSbrXyJM6XwdXx985QUMLX1",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu consumed 23488 of 200000 compute units",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu success"
+      ]
+    },
+    {
+      "instruction": "create_user_card",
+      "expected_error": null,
+      "logs": [
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu invoke [1]",
+        "Program log: Instruction: CreateUserCard",
+        "Program 11111111111111111111111111111111 invoke [2]",
+        "Program 11111111111111111111111111111111 success",
+        "Program log: User card created for: Efh48rrUQ3XNjj6Rm8YbqgtVbsEC8S6Q7M2zEgXbVJ5t",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu consumed 23592 of 200000 compute units",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu success"
+      ]
+    },
+    {
+      "instruction": "create_user_card",
+      "expected_error": null,
+      "logs": [
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu invoke [1]",
+        "Program log: Instruction: CreateUserCard",
+        "Program 11111111111111111111111111111111 invoke [2]",
+        "Program 11111111111111111111111111111111 success",
+        "Program log: User card created for: 6RasP8Zz53GjAUUvfe8uCynk3afbrz48S1u97G26z8XK",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu consumed 23514 of 200000 compute units",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu success"
+      ]
+    },
+    {
+      "instruction": "deposit",
+      "expected_error": "AccountNotInitialized",
+      "logs": [
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu invoke [1]",
+        "Program log: Instruction: Deposit",
+        "Program log: AnchorError caused by account: user_card. Error Code: AccountNotInitialized. Error Number: 3012. Error Message: The program expected this account to be already initialized.",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu consumed 6219 of 200000 compute units",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu failed: custom program error: 0xbc4"
+      ]
+    },
+    {
+      "instruction": "deposit",
+      "expected_error": "ZeroAmount",
+      "logs": [
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu invoke [1]",
+        "Program log: Instruction: Deposit",
+        "Program log: AnchorError thrown in 2fde269f-4ffd-416b-9247-bab2e3bcf937/src/lib.rs:48. Error Code: ZeroAmount. Error Number: 6000. Error Message: Amount must be greater than zero.",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu consumed 23957 of 200000 compute units",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu failed: custom program error: 0x1770"
+      ]
+    },
+    {
+      "instruction": "deposit",
+      "expected_error": "BelowMinimum",
+      "logs": [
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu invoke [1]",
+        "Program log: Instruction: Deposit",
+        "Program log: AnchorError thrown in 2fde269f-4ffd-416b-9247-bab2e3bcf937/src/lib.rs:51. Error Code: BelowMinimum. Error Number: 6004. Error Message: Minimum deposit is one whole token.",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu consumed 24101 of 200000 compute units",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu failed: custom program error: 0x1774"
+      ]
+    },
+    {
+      "instruction": "set_paused",
+      "expected_error": "ConstraintHasOne",
+      "logs": [
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu invoke [1]",
+        "Program log: Instruction: SetPaused",
+        "Program log: AnchorError caused by account: vault_state. Error Code: ConstraintHasOne. Error Number: 2001. Error Message: A has one constraint was violated.",
+        "Program log: Left:",
+        "Program log: CfxiG2r7kvidUw2tauv4VM7gzJ1FfnEtcbhh6Z4zuRK",
+        "Program log: Right:",
+        "Program log: 5X9y39Zh1EsRub8HZpx9odSbrXyJM6XwdXx985QUMLX1",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu consumed 6062 of 200000 compute units",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu failed: custom program error: 0x7d1"
+      ]
+    },
+    {
+      "instruction": "set_paused",
+      "expected_error": null,
+      "logs": [
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu invoke [1]",
+        "Program log: Instruction: SetPaused",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu consumed 4135 of 200000 compute units",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu success"
+      ]
+    },
+    {
+      "instruction": "deposit",
+      "expected_error": "Paused",
+      "logs": [
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu invoke [1]",
+        "Program log: Instruction: Deposit",
+        "Program log: AnchorError thrown in 2fde269f-4ffd-416b-9247-bab2e3bcf937/src/lib.rs:49. Error Code: Paused. Error Number: 6003. Error Message: Vault is paused.",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu consumed 24021 of 200000 compute units",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu failed: custom program error: 0x1773"
+      ]
+    },
+    {
+      "instruction": "create_user_card",
+      "expected_error": "Paused",
+      "logs": [
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu invoke [1]",
+        "Program log: Instruction: CreateUserCard",
+        "Program 11111111111111111111111111111111 invoke [2]",
+        "Program 11111111111111111111111111111111 success",
+        "Program log: AnchorError thrown in 2fde269f-4ffd-416b-9247-bab2e3bcf937/src/lib.rs:31. Error Code: Paused. Error Number: 6003. Error Message: Vault is paused.",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu consumed 15802 of 200000 compute units",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu failed: custom program error: 0x1773"
+      ]
+    },
+    {
+      "instruction": "set_paused",
+      "expected_error": null,
+      "logs": [
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu invoke [1]",
+        "Program log: Instruction: SetPaused",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu consumed 4135 of 200000 compute units",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu success"
+      ]
+    },
+    {
+      "instruction": "deposit",
+      "expected_error": "ConstraintAddress",
+      "logs": [
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu invoke [1]",
+        "Program log: Instruction: Deposit",
+        "Program log: AnchorError caused by account: fee_wallet. Error Code: ConstraintAddress. Error Number: 2012. Error Message: An address constraint was violated.",
+        "Program log: Left:",
+        "Program log: 8vu3CzbMzL5kE9Cv6z46aMhS3nyEQJgKyfuToG2inpBV",
+        "Program log: Right:",
+        "Program log: 7XjrXswyxAg8PfnKRBSHxWeyfPXcT1gcjJnRx6W5rnwJ",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu consumed 20070 of 200000 compute units",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu failed: custom program error: 0x7dc"
+      ]
+    },
+    {
+      "instruction": "deposit",
+      "expected_error": "ConstraintTokenOwner",
+      "logs": [
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu invoke [1]",
+        "Program log: Instruction: Deposit",
+        "Program log: AnchorError occurred. Error Code: ConstraintTokenOwner. Error Number: 2015. Error Message: A token owner constraint was violated.",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu consumed 22815 of 200000 compute units",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu failed: custom program error: 0x7df"
+      ]
+    },
+    {
+      "instruction": "deposit",
+      "expected_error": null,
+      "logs": [
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu invoke [1]",
+        "Program log: Instruction: Deposit",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 76 of 175734 compute units",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 76 of 172767 compute units",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 119 of 169767 compute units",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+        "Program log: Deposit: 100000000 tokens -> 99000000 shares (total_tokens=99000000, total_shares=99000000)",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu consumed 34144 of 200000 compute units",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu success"
+      ]
+    },
+    {
+      "instruction": "deposit",
+      "expected_error": null,
+      "logs": [
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu invoke [1]",
+        "Program log: Instruction: Deposit",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 76 of 175479 compute units",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 76 of 172512 compute units",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 119 of 169512 compute units",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+        "Program log: Deposit: 200000000 tokens -> 198000000 shares (total_tokens=297000000, total_shares=297000000)",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu consumed 34447 of 200000 compute units",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu success"
+      ]
+    },
+    {
+      "instruction": "deposit",
+      "expected_error": null,
+      "logs": [
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu invoke [1]",
+        "Program log: Instruction: Deposit",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 76 of 175479 compute units",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 76 of 172512 compute units",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 119 of 169512 compute units",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success",
+        "Program log: Deposit: 300000000 tokens -> 297000000 shares (total_tokens=594000000, total_shares=594000000)",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu consumed 34447 of 200000 compute units",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu success"
+      ]
+    },
+    {
+      "instruction": "close_user_card",
+      "expected_error": "ActivePosition",
+      "logs": [
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu invoke [1]",
+        "Program log: Instruction: CloseUserCard",
+        "Program log: AnchorError thrown in 2fde269f-4ffd-416b-9247-bab2e3bcf937/src/lib.rs:129. Error Code: ActivePosition. Error Number: 6005. Error Message: Cannot close a card with an active position.",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu consumed 8671 of 200000 compute units",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu failed: custom program error: 0x1775"
+      ]
+    },
+    {
+      "instruction": "deposit",
+      "expected_error": "insufficient funds",
+      "logs": [
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu invoke [1]",
+        "Program log: Instruction: Deposit",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]",
+        "Program log: Error: insufficient funds",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 181 of 175479 compute units",
+        "Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA failed: custom program error: 0x1",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu consumed 24702 of 200000 compute units",
+        "Program EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu failed: custom program error: 0x1"
+      ]
+    }
+  ],
+  "summary": {
+    "scenarios": 19,
+    "gross_deposits": [
+      100,
+      200,
+      300
+    ],
+    "fee_tokens": 6,
+    "vault_tokens": 594,
+    "shares": [
+      99,
+      198,
+      297
+    ],
+    "fractions": [
+      "1/6",
+      "1/3",
+      "1/2"
+    ],
+    "decimals": 6,
+    "rollback_verified": true
+  }
+}
