@@ -1,0 +1,15 @@
+{
+  "cluster": "devnet",
+  "mint": "G77KQEeVfvh1zbF9pBkH71iEbyEYkMvZhBCsGUeA44fe",
+  "metadata_account": "F5xsxQN9j5MJmX4D5ogA81Die6SU9eADGCc6NPW4ABb2",
+  "token_account": "HuqjbCKhMMtd7eZzX2eBF6pWRH7AGGBk2Z1UNXoCJa9E",
+  "metadata_uri": "https://raw.githubusercontent.com/Codekeeper45/almau-solana-devnet/main/06-week7-metadata/metadata.json",
+  "signatures": [
+    "2tcfj9aRe7a4YF16RpkQgUB7nhU2vst4ChoXfREEQA33C9Fizxhkn6VyBsNuexiofVBRhJiwhbgjFCsrBtRLbcDY",
+    "4oY2ut5cALfkaaHEbmS4RDUAR3Pyjh2Fjz7SYjJfZVcXYoVd4BDt1vaia2CtVowQn4bq7rcxd5z3DG1QxMAHunVM",
+    "guyH4rnv1ViYpu8VVFzppdBzGfzCJFtXVyGESdbWf6S4LChpcW6YoW85XDDHzVjN2NfXGNAgqFQXZbPmkPfwRnk",
+    "3WHTfuPWphSSXDpCMfEpUf3LmJgjwVnYNCSCp6axf546UyaCEFajqaXMGsdJEFdidPhbCB7Npak85UgsB1acPbuw"
+  ],
+  "metadata_owner": "metaqbxxUerdq28cj1RbAWkYQm3ybzjb6a8bt518x1s",
+  "verified": true
+}
