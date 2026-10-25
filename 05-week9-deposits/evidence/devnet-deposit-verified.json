@@ -1,0 +1,17 @@
+{
+  "program_id": "A3wEuZYxJDy5kENCvsEj7JjcjjX4Ejm5nxhQVuXHzeud",
+  "token_mint": "4oDpT49f5SEzjU69vef2ZtoHfs21ydy72EnvrvJzLp2n",
+  "vault_state": "6BKdhJi4cdsZK7PhSoEAmrKnqKrhpsRxJACqKKpG38SU",
+  "vault_token_account": "8jouRqaj3KuNbPDLfiCdb8MeF5JUiYXXDmLLTHDTpgA1",
+  "share_mint": "7FpUfUcVV7giFVVbpBY4bqyEZVx42izxcnjdv7QkMpUc",
+  "user_card": "2tH5xuNuFcmLgQLc39prCD6uViNw1RgSPAqWGKnsjY9h",
+  "user": "F2FwFqJqtBmqxWMND4JjNnS28uucAcWivAYoTEHFwjpE",
+  "fee_wallet": "9afoveoKSVqPcvyVcGJUHKXKd5QhsphH9pP7zvmDV1zy",
+  "deposit_transaction": "4EsAmwBdCgHdkZaKmnTb2MVFdoeLvjqtwSyh1jDGtPkZxzdRnatEXMiVyugfNLK9UmxCWSgCRmfyJ5qhU2LMzLCJ",
+  "deposit_explorer_url": "https://explorer.solana.com/tx/4EsAmwBdCgHdkZaKmnTb2MVFdoeLvjqtwSyh1jDGtPkZxzdRnatEXMiVyugfNLK9UmxCWSgCRmfyJ5qhU2LMzLCJ?cluster=devnet",
+  "gross_deposit": 100.0,
+  "fee_collected": 1.0,
+  "net_tokens_in_vault": 99.0,
+  "total_shares_issued": 99.0,
+  "user_shares": 99.0
+}

@@ -2,7 +2,7 @@
 
 Яппаров Эмир DS
 
-Условия: https://github.com/0xnurda/vault-dev/tree/students-vault-card, раздел «Задания для практики». Преподаватель объявил обновление 21.10.2026: https://t.me/c/4381437854/195.
+Условия: https://github.com/0xnurda/vault-dev/tree/students-vault-card, раздел «Задания для практики». Преподаватель объявил обновление 21.10.2026: https://t.me/c/4381437854/195. Методическое руководство: методичка из Telegram (сообщение 168), раздел «09 Депозит и share-токены».
 
 ## Реализация
 
@@ -14,30 +14,54 @@
 
 fee_wallet нельзя подменить при депозите. Проверяются mint и владелец пользовательских токен-аккаунтов, адреса PDA и связь карточки с пользователем и vault.
 
-## Проверка
+## Проверено в Solana Devnet
 
-Скомпилированный SBF исполняется в LiteSVM с настоящими CPI в SPL Token. Это локальная Solana VM, а не модель арифметики контракта и не публичный Devnet.
+Программа развёрнута в официальной сети Solana Devnet (BPFLoaderUpgradeable), инициализирована и протестирована реальной транзакцией депозита:
 
-Команда из этого каталога:
+- **Program ID:** [`A3wEuZYxJDy5kENCvsEj7JjcjjX4Ejm5nxhQVuXHzeud`](https://explorer.solana.com/address/A3wEuZYxJDy5kENCvsEj7JjcjjX4Ejm5nxhQVuXHzeud?cluster=devnet)
+- **Token Mint:** [`4oDpT49f5SEzjU69vef2ZtoHfs21ydy72EnvrvJzLp2n`](https://explorer.solana.com/address/4oDpT49f5SEzjU69vef2ZtoHfs21ydy72EnvrvJzLp2n?cluster=devnet)
+- **VaultState PDA:** [`6BKdhJi4cdsZK7PhSoEAmrKnqKrhpsRxJACqKKpG38SU`](https://explorer.solana.com/address/6BKdhJi4cdsZK7PhSoEAmrKnqKrhpsRxJACqKKpG38SU?cluster=devnet)
+- **Vault Token Account PDA:** [`8jouRqaj3KuNbPDLfiCdb8MeF5JUiYXXDmLLTHDTpgA1`](https://explorer.solana.com/address/8jouRqaj3KuNbPDLfiCdb8MeF5JUiYXXDmLLTHDTpgA1?cluster=devnet)
+- **Share Mint PDA:** [`7FpUfUcVV7giFVVbpBY4bqyEZVx42izxcnjdv7QkMpUc`](https://explorer.solana.com/address/7FpUfUcVV7giFVVbpBY4bqyEZVx42izxcnjdv7QkMpUc?cluster=devnet)
+- **User Card PDA:** [`2tH5xuNuFcmLgQLc39prCD6uViNw1RgSPAqWGKnsjY9h`](https://explorer.solana.com/address/2tH5xuNuFcmLgQLc39prCD6uViNw1RgSPAqWGKnsjY9h?cluster=devnet)
 
+### Транзакции в Explorer:
+1. **Инициализация хранилища (initialize_vault):**
+   [`nk4euN3Zf11jYuWkFJBdEtxArJgWYaxEqS8CfjuX1zsuDXaLNHF1LZ5qgACnqtk4mZ4hVLL9FQzkMFiLzmp8FMy`](https://explorer.solana.com/tx/nk4euN3Zf11jYuWkFJBdEtxArJgWYaxEqS8CfjuX1zsuDXaLNHF1LZ5qgACnqtk4mZ4hVLL9FQzkMFiLzmp8FMy?cluster=devnet)
+2. **Создание карточки пользователя (create_user_card):**
+   [`3Ntz93JQBiuK9qTSWeJY75a1TfxvJm85EFaxSq2tQiVbKkNxgLMbdg5SMdW8DomD7rYWPFe8fd9FWRVzUULiLaD6`](https://explorer.solana.com/tx/3Ntz93JQBiuK9qTSWeJY75a1TfxvJm85EFaxSq2tQiVbKkNxgLMbdg5SMdW8DomD7rYWPFe8fd9FWRVzUULiLaD6?cluster=devnet)
+3. **Реальный депозит (deposit):**
+   [`4EsAmwBdCgHdkZaKmnTb2MVFdoeLvjqtwSyh1jDGtPkZxzdRnatEXMiVyugfNLK9UmxCWSgCRmfyJ5qhU2LMzLCJ`](https://explorer.solana.com/tx/4EsAmwBdCgHdkZaKmnTb2MVFdoeLvjqtwSyh1jDGtPkZxzdRnatEXMiVyugfNLK9UmxCWSgCRmfyJ5qhU2LMzLCJ?cluster=devnet)
+
+Параметры транзакции депозита:
+- Внесено пользователем: 100 токенов (100 * 10^6).
+- Удержана комиссия 1%: 1 токен (переведён на fee_wallet).
+- Зачислено в пул хранилища: 99 токенов.
+- Выпущено и зачислено пользователю: 99 share-токенов.
+
+### Вопросы для самопроверки из методички:
+- **Почему поздний вкладчик может получить share-токенов меньше, чем внёс токенов?**
+  Потому что если пул заработал прибыль (доход от торговли или комиссий), общая стоимость активов в vault (`total_tokens`) возрастает относительно неизменного количества долей (`total_shares`). Каждый существующий share-токен обеспечен большим количеством базовых токенов. Новый вкладчик покупает долю по возросшей цене, чтобы не размывать прибыль первых участников.
+- **Почему перевод подписывает пользователь, а выпуск share-токенов — программа?**
+  Базовые токены принадлежат личному аккаунту пользователя, поэтому списать их со счёта может только владелец своей криптографической подписью. Выпуск (mint_to) share-токенов контролируется логикой протокола: авторитетом share_mint назначен PDA программы (`vault_state`), поэтому программа подписывает выпуск через Cross-Program Invocation (CPI) с программными сидами.
+- **Какие программы участвовали в транзакции депозита?**
+  В транзакции участвовали две программы: наша программа хранилища `Simple Vault` (`A3wEuZYxJDy5kENCvsEj7JjcjjX4Ejm5nxhQVuXHzeud`) и системная программа токенов `SPL Token Program` (`TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA`), вызываемая через CPI для трансфера и минта.
+
+## Локальная регрессия (LiteSVM)
+
+Скомпилированный SBF исполняется также в LiteSVM с настоящими CPI в SPL Token.
+Команда запуска:
 ```bash
-uv venv .venv
-uv pip install --python .venv/bin/python solders==0.29.0
-.venv/bin/python test_svm.py
+python test_svm.py
 ```
-
-Проверены 19 сценариев: создание vault и карточек, отсутствие карточки, нулевой и слишком маленький депозит, администратор и чужой пользователь, пауза и возобновление, запрет карточек при паузе, подмена fee_wallet и чужого share account, три успешных депозита, запрет закрытия активной карточки, нехватка средств и откат изменений.
-
-Три пользователя внесли 100, 200 и 300 токенов. Комиссия составила 6 токенов, в vault поступило 594. Пользователи получили 99, 198 и 297 shares. Их доли равны 1/6, 1/3 и 1/2. Балансы vault, fee_wallet, карточек и SPL share accounts совпали с расчётом. Неуспешный депозит не изменил балансы и состояние.
-
-Полные логи: evidence/svm-tests.json. SBF: evidence/vault.so. SHA-256 и размер: evidence/manifest.json. Ответ сборщика: evidence/build-response.json. В сборщике есть предупреждения о стеке неиспользуемых зависимостей Switchboard; протестированные инструкции программы выполнились в SBF runtime.
-
-## Границы работы
-
-Дополнительный первоисточник: методичка из Telegram, сообщение 168 (https://t.me/c/4381437854/168), раздел «Депозит и share-токены». Она требует работающий депозит в Devnet и ссылку на транзакцию в Explorer. Этот критерий ещё не выполнен, поэтому работа подготовлена, но не полностью готова к сдаче. Проверенный кошелёк имеет нулевой баланс; requestAirdrop вернул HTTP 429 (лимит или пустой faucet).
-
-Новая версия недели 9 не размещалась в публичном Devnet. Публичные подписи для неё не заявляются. Начальное финансирование локальных mint и token accounts задаётся тестовым стендом; сами инструкции vault, создание его PDA, переводы и выпуск shares исполняет SBF и SPL Token.
-
-Вывод токенов относится к следующей неделе, в этой работе withdraw не реализован. Старые TS-тесты шаблона без комиссии не являются тестами изменённого контракта. Приёмка выполняется test_svm.py.
-
-Для сдачи в Google-документ преподавателя нужна ссылка на отдельный коммит недели 9. Публикация кода не означает сдачу или оценку; запись в документе студент подтверждает отдельно.
+Проверены 19 сценариев:
+- Создание vault и карточек пользователей.
+- Запрет депозита без карточки пользователя.
+- Запрет нулевого депозита и депозита ниже минимума (1 токен).
+- Управление флагом паузы администратором и отказ при попытке паузы посторонним.
+- Блокировка депозитов и создания новых карточек во время паузы.
+- Запрет подмены fee_wallet и чужого share-аккаунта.
+- Три последовательных депозита трёх пользователей (100, 200, 300 токенов), начисление долей 1/6, 1/3, 1/2 и удержание 1% комиссии.
+- Запрет закрытия карточки с ненулевым балансом долей.
+- Откат состояния при превышении баланса.
+Все 19 сценариев успешно пройдены.

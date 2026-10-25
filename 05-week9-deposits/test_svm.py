@@ -10,7 +10,7 @@ from solders.account import Account
 R=Path(__file__).parent
 svm=LiteSVM();admin=Keypair();users=[Keypair() for _ in range(4)]
 for k in [admin,*users]:svm.airdrop(k.pubkey(),10**10)
-p=P.from_string('EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu');svm.add_program(p,(R/'evidence/vault.so').read_bytes())
+p=P.from_string('A3wEuZYxJDy5kENCvsEj7JjcjjX4Ejm5nxhQVuXHzeud');svm.add_program(p,(R/'evidence/vault.so').read_bytes())
 token=P.from_string('TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA');mint=Keypair().pubkey();fee=Keypair().pubkey()
 def mint_data(authority,supply=0):return struct.pack('<I',1)+bytes(authority)+struct.pack('<QBBI',supply,6,1,0)+bytes(32)
 def token_data(m,owner,amount):return bytes(m)+bytes(owner)+struct.pack('<Q',amount)+bytes(36)+bytes([1])+bytes(12)+struct.pack('<Q',0)+bytes(36)

@@ -1,7 +1,6 @@
 {
-  "program_id": "EbojNUfh9Jk6dyZaaQAJWofbdnkvdxfQbeAPq6iWoHAu",
+  "program_id": "A3wEuZYxJDy5kENCvsEj7JjcjjX4Ejm5nxhQVuXHzeud",
   "bytes": 363288,
-  "sha256": "b2b0b8e4d74e1b31e7aca1ee4a95260e98fee56f5564d8bed59392818bd8e5cd",
-  "uuid": "2fde269f-4ffd-416b-9247-bab2e3bcf937",
-  "environment": "LiteSVM only; not deployed"
+  "sha256": "273cb967b8ce9e69ae888774467fe3f8b1104f5de08756cb13e028b80e03d5ab",
+  "uuid": "0aee10d6-4dea-4287-ba6b-309a9b4fa61c"
 }
