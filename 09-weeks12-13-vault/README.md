@@ -24,4 +24,13 @@ Vault хранит базовый и котируемый SPL-токены на 
 - [Отклонённый обмен](https://explorer.solana.com/tx/3qTuiHcrUk2HUnKpSd6JKpTHQNms4bLz7dbVzuMbY2oEDFVJCmEhgbTKr4hhmX4vqQUGcTWWqoSJ2KEMFQPnvLHd?cluster=devnet): Raydium отклонил завышенный минимум, балансы токенов vault не изменились.
 - [Попытка обмена без прав администратора](https://explorer.solana.com/tx/W82bbmx7vG6ubKCNuvj8P2PDpepwG1az8RaxoSaYN5sDo584icbUUWmFTQAQRmk6QDFaW4Q7XWEriwNoWM4di8Q?cluster=devnet): vault отклонил вызов.
 
-Полный сценарий 13-й недели ещё проверяется.
+## Результат 13-й недели в Devnet
+
+[Обновление vault](https://explorer.solana.com/tx/5uUkRjM2ufzFHMV2Gd46Kg1taUs5hescdvxiNNsVRishrPefMYxEZ5qQo1syqm2WkjcJ4afFBtJPg1YtqwrxBVEB?cluster=devnet) прошло; байты программы в сети совпали с локальным бинарником после `llvm-strip --strip-unneeded`.
+
+- [Открытие](https://explorer.solana.com/tx/c8jJ7hoqm9bb6m9yo6Rt4CB2XzesXwYAv8fvkZPL3y9uqUjRrMZEwe4ncTYawh6FbpiJGsW8bPEPSQhvwUKrXKD?cluster=devnet): тики от −660 до 540. Vault внёс 7,033424 A и 7,741458 B. NFT принадлежит PDA. На счетах vault не осталось делегата.
+- После трёх обменов с другого кошелька vault [собрал комиссии](https://explorer.solana.com/tx/3GzSHd1pJq3Nj5jeUNSH6FarxJLuc8aYv9vmxELbyKBb8BbjcDYYWrQds3s6oiRLbzs8vKw7vji1SDDFHLwQ1VrC?cluster=devnet): 0,000907 A и 0,000259 B.
+- При [закрытии](https://explorer.solana.com/tx/w69Zzo6SXBpNWfpDcFmVNcgS9NQQHJk3355BnsuPmyCfnhwyPEofwcjQNbmi8xAWzYtjY7N1Qh86dhmjq8GZvFY?cluster=devnet) вернулись 7,340743 A и 7,435431 B. NFT и аккаунт позиции закрыты.
+- Для ребалансировки цена опустилась до тика −251 и вышла из диапазона от −180 до 60. Vault закрыл узкую позицию и [открыл новую](https://explorer.solana.com/tx/SYngzDndQoRAsYTfmPpUn58dyiKkHSNNKWSYSnVW1vJdy16xk9EfS1hkwkqa7fRmhDJ4zoXmBYPLhmwYBxSddLL?cluster=devnet) в диапазоне от −900 до 300, который включает текущую цену. Новая тестовая позиция осталась открытой.
+
+Все подписи транзакций и суммы в минимальных единицах: [`devnet-weeks12-13.json`](../08-week11-clmm/evidence/devnet-weeks12-13.json).

@@ -15,5 +15,83 @@
     "beforePrice": "1",
     "afterPrice": "0.9970142029182"
   },
-  "unauthorized": "W82bbmx7vG6ubKCNuvj8P2PDpepwG1az8RaxoSaYN5sDo584icbUUWmFTQAQRmk6QDFaW4Q7XWEriwNoWM4di8Q"
+  "unauthorized": "W82bbmx7vG6ubKCNuvj8P2PDpepwG1az8RaxoSaYN5sDo584icbUUWmFTQAQRmk6QDFaW4Q7XWEriwNoWM4di8Q",
+  "position": {
+    "tx": "c8jJ7hoqm9bb6m9yo6Rt4CB2XzesXwYAv8fvkZPL3y9uqUjRrMZEwe4ncTYawh6FbpiJGsW8bPEPSQhvwUKrXKD",
+    "lower": -660,
+    "upper": 540,
+    "nft": "GwvY5hL4DX2LM7azxVZ3ZoJph11KgdXjGDuL3ueybu1r",
+    "personal": "5sLypbqVsi8SN5NZ4Ptj9kCe43ZjbAdwUL14dyKmz5pw",
+    "liquidity": "250000000",
+    "depositedRaw": [
+      "7033424",
+      "7741458"
+    ]
+  },
+  "trades": [
+    "5M554XV9D6kAk7FhFn8Zv3fKYCmseAFJMxidW5AobLiJ4fy5wCnXDy7AFfia4kj9u9Gm5vebvDfVQskC4fevwiwp",
+    "5oFMDHDbzvfxg9SJUttABGp6qYv7DbhHdcbu6QMWYkJFzbV25RokFNg8TNRxuUNWGnrPbuHSVpTyyNZLmHkr14ar",
+    "9UW8Kp31qUekg2z8aaDMPaZqQWa4HX5t2mYsNY7tcXTg99oavkc9gaPBfD2wuuPc83i2piHkUFQMenkpodtcqKE"
+  ],
+  "fees": {
+    "tx": "3GzSHd1pJq3Nj5jeUNSH6FarxJLuc8aYv9vmxELbyKBb8BbjcDYYWrQds3s6oiRLbzs8vKw7vji1SDDFHLwQ1VrC",
+    "returnedRaw": [
+      "907",
+      "259"
+    ],
+    "minRaw": [
+      "0",
+      "0"
+    ]
+  },
+  "closed": {
+    "tx": "w69Zzo6SXBpNWfpDcFmVNcgS9NQQHJk3355BnsuPmyCfnhwyPEofwcjQNbmi8xAWzYtjY7N1Qh86dhmjq8GZvFY",
+    "returnedRaw": [
+      "7340743",
+      "7435431"
+    ],
+    "minRaw": [
+      "1",
+      "1"
+    ]
+  },
+  "rebalanceOld": {
+    "tx": "22qwRJMdgKJLgcXrKzZRiRbgsfQcH1mJ9V64n8zhZ1rpA1bJckXq42c5wdqLY1Dyg3faLGfiKTeFSyGBiyKLZErf",
+    "lower": -180,
+    "upper": 60,
+    "nft": "4EM5W8xYyJFjy4A633DZVMbze2wx4aoFECn58axSrXus",
+    "personal": "HVHcE4Neomo197bUiydfRaLpbsvQkQgcnrdSZ6NKncb3",
+    "liquidity": "250000000",
+    "depositedRaw": [
+      "1430221",
+      "1560264"
+    ]
+  },
+  "move": {
+    "tx": "3T4JD19DX7eQaG1dqMkQmA2qD7k1HF7FDFZyZYMSinyzGmWkB9oKNB3okHi4ajSxzYULw5NAr9uGw4qUf37Hi1ZU",
+    "tick": -251
+  },
+  "rebalanceClose": {
+    "tx": "4YDuYkiS6BZS3zAm8yedRp4mfzXmfQq1FLLGV8fg3yPf7457d1ubMkAFakXne1wasVfaKyD6ffHzZxdJLm4yckCc",
+    "returnedRaw": [
+      "3012203",
+      "0"
+    ],
+    "minRaw": [
+      "1",
+      "0"
+    ]
+  },
+  "rebalanceNew": {
+    "tx": "SYngzDndQoRAsYTfmPpUn58dyiKkHSNNKWSYSnVW1vJdy16xk9EfS1hkwkqa7fRmhDJ4zoXmBYPLhmwYBxSddLL",
+    "lower": -900,
+    "upper": 300,
+    "nft": "71E9uhmHjwEFXL7Tr8sgpCVmSZHN6ui9MVH8UW5jjxBd",
+    "personal": "FaoqwD6oVhBnY8aqWoKW3cDzDvUxX7YPTxfcqWCdvg9b",
+    "liquidity": "250000000",
+    "depositedRaw": [
+      "6877230",
+      "7884023"
+    ]
+  }
 }
