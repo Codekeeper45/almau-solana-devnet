@@ -1,0 +1,19 @@
+{
+  "program": "EGrtYqUVMoRxGbQj6YT5KhYNTdNQsybBjidq8zVJiahQ",
+  "poolId": "5d9XKBYg3VJkZjYsyCpWyfTht8KTipWLRhnPgDPrUMac",
+  "vault": "EkBXz7M3sWLqxFfbW5D19xe3ANU6xqijLVerPJPE4cCh",
+  "initialize": "4XqFE2hzJ8d2Szq8br3C79Jib3c2so1G8pwXn5JgcNd6nF9GYhvomYqiJUXDsMXnM69wyMkiCGsFCePZMhDtDUp3",
+  "card": "3hNutNM1PWUYix7mSmzwdfUMnp6fYVH3rcumMBLiNwSq3SEvtrFPHnZHo2Ma1CBS1ZmzCcKE2fPFS2KsKQ6bbP3n",
+  "deposit": "2ECux6RSdzHqw99fooHkus1tK6NFTa1sK9guoW883gyYCwGow9BBCbfGCbK8pbKy6JdtH8kzzpq9NvPkEXdBdd6W",
+  "swap": {
+    "tx": "DhyYy6V221h196MemMStov6YzxgHUZuF1sLezmhviYzvb2d6q9Uvz2oWEv5hZg6PydTowSdFYD9Yxgsgp23f5j8",
+    "reject": "3qTuiHcrUk2HUnKpSd6JKpTHQNms4bLz7dbVzuMbY2oEDFVJCmEhgbTKr4hhmX4vqQUGcTWWqoSJ2KEMFQPnvLHd",
+    "inputRaw": "30000000",
+    "expectedRaw": "29880291",
+    "minOutRaw": "29581488",
+    "actualRaw": "29880291",
+    "beforePrice": "1",
+    "afterPrice": "0.9970142029182"
+  },
+  "unauthorized": "W82bbmx7vG6ubKCNuvj8P2PDpepwG1az8RaxoSaYN5sDo584icbUUWmFTQAQRmk6QDFaW4Q7XWEriwNoWM4di8Q"
+}
