@@ -1,0 +1,14 @@
+{
+  "cluster": "devnet",
+  "wallet": "EhzvmmwTRiSbuBy8So5Vj1boihWQXa2FmPkgYNXqHopn",
+  "tokenA": "8wcsYmpedf56hYmgNgRUeupUggCZdg4eLij8XwRS79PU",
+  "tokenB": "AxPBpb81kP2fgRFPsNmYmryXmsvNobxMQUYaFHTeBceG",
+  "mintTx": "5LqHrXQV922pnzZMhhNd3bnYwm8hDG9cDGF83fnrCkwuob2N9CptmudhgaLXPumkywYRDsiXkGqBc1Pb3hmjn3MP",
+  "poolId": "5d9XKBYg3VJkZjYsyCpWyfTht8KTipWLRhnPgDPrUMac",
+  "clmmProgram": "DRayAUgENGQBKVaX8owNhgzkEDyoHTGVEGHVJT1E9pfH",
+  "ammConfig": "CD4aJtX11cqTCAc83nxSPkkh5JW2yjD6uwHeovjqQ1qu",
+  "tickSpacing": 60,
+  "tradeFeeRate": 2500,
+  "initialPrice": 1,
+  "tx": "CJhPVguSBLEEeq3vpqFHX5rYYiidVGP6WfjETxcARWDZfJC3DwwjBoyQcc6A91uXJzDh3KHuQPRxoJ6yqNPwYCw"
+}

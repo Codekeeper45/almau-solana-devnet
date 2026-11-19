@@ -1,0 +1,4 @@
+node_modules/
+.devnet-mints.json
+devnet-pool.json
+!evidence/devnet-pool.json
