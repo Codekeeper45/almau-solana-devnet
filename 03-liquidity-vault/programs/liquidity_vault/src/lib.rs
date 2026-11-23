@@ -8,7 +8,7 @@ pub mod liquidity_vault {
     use super::*;
 
     /// Chapter 8 scaffold: initialize configuration, program-controlled share mint,
-    /// and underlying-token vault. No deposit/swap/CLMM behavior is implemented.
+    /// and underlying-token vault.
     pub fn create_vault(ctx: Context<CreateVault>) -> Result<()> {
         let config = &mut ctx.accounts.config;
         config.admin = ctx.accounts.admin.key();
@@ -19,7 +19,7 @@ pub mod liquidity_vault {
         Ok(())
     }
 
-    /// Create the user's PDA card. Chapter 8 only: no token movement or position value yet.
+    /// Create the user's PDA card.
     pub fn open_position(ctx: Context<OpenPosition>) -> Result<()> {
         let position = &mut ctx.accounts.position;
         position.user = ctx.accounts.user.key();
@@ -91,10 +91,6 @@ pub enum VaultError {
     Unauthorized,
 }
 
-// This is a preparation scaffold, not the instructor's unpublished starter and not yet audited.
-// Before using: set a real program ID, generate Anchor IDL, add account constraints/tests,
-// and verify account ordering against the provided template when it arrives.
-// Weeks 9-15 features (deposit/withdraw CPI, swaps, CLMM positions/fees) are intentionally absent.
 
 #[cfg(test)]
 mod tests {

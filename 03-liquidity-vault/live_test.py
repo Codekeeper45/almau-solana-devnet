@@ -1,15 +1,15 @@
-import sys, json, hashlib, struct
+import os, sys, json, hashlib, struct
 from pathlib import Path
 from solders.pubkey import Pubkey
 from solders.instruction import Instruction, AccountMeta as M
 from solders.transaction import Transaction
 from solders.message import Message
 
-sys.path.insert(0, '/home/hermes/projects/almau-solana-rk1')
+sys.path.insert(0, os.path.expanduser('~/projects/almau-solana-rk1'))
 from devnet_work import rpc, key
 from deploy_devnet import send
 
-ROOT = Path('/home/hermes/projects/almau-liquidity-vault')
+ROOT = Path('~/projects/almau-liquidity-vault').expanduser()
 evidence = ROOT / 'evidence'
 evidence.mkdir(exist_ok=True)
 

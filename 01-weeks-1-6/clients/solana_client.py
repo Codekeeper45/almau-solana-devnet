@@ -2,8 +2,8 @@ import hashlib, json, struct
 from pathlib import Path
 from solders.pubkey import Pubkey
 
-COUNTER_PROGRAM = Pubkey.from_string("Fg6PaFpoGXkYsidMpWxTWqkZ8q7kL6K2f3d9c8P4v1A")
-PROFILE_PROGRAM = Pubkey.from_string("Fg6PaFpoGXkYsidMpWxTWqkZ8q7kL6K2f3d9c8P4v1B")
+COUNTER_PROGRAM = Pubkey.from_string("BPj5PmjBAaCB2W5MYTiRip3ktFYNgWSUmHKNhzQmySVD")
+PROFILE_PROGRAM = Pubkey.from_string("22NbKaaD3vLDEAi3jxM9FzwJdAJXR5kBzSmfq2mJi7AM")
 STUDENT_AUTHORITY = Pubkey.from_string("2SzJ2PSuhnQsenfvHK4DhQHibjVL2d68fwdHAMwxJ7pL")
 
 def discriminator(namespace: str, name: str) -> bytes:

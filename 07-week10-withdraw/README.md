@@ -2,9 +2,7 @@
 
 Яппаров Эмир DS
 
-Задание 10 недели опубликовано преподавателем 04.11.2026 (сообщение 218 в Telegram):
-Официальный репозиторий: https://github.com/0xnurda/vault-dev/tree/students-vault-card
-Методическое руководство: методичка недели 8-15 (раздел «10 CPI и вывод из vault»).
+Условие: [шаблон курса](https://github.com/0xnurda/vault-dev/tree/students-vault-card) и методичка, раздел «10 CPI и вывод из vault».
 
 ## 1. Суть задания и архитектура
 
@@ -36,7 +34,11 @@ tokens_out = shares_amount * total_tokens / total_shares
    - `user_card.deposited = card.deposited.saturating_sub(tokens_out)`
    - `user_card.shares = card.shares.saturating_sub(shares_amount)`
 
-## 3. Отображение в Solana Explorer (Inner Instructions)
+## 3. Вывод в Solana Devnet и Inner Instructions
+
+[Транзакция вывода в Explorer](https://explorer.solana.com/tx/2cuvF1CtFDLNnz3Q5kGdViURBbTL477GMRE1Q9nuEqLeayQZjkgK4sxk6oMwcVvJhH2zPSGCwbpa3EjVLVMPJ5wv?cluster=devnet). Проверка выполнена на отдельном тестовом хранилище под [текущей объединённой программой Devnet](https://explorer.solana.com/address/EGrtYqUVMoRxGbQj6YT5KhYNTdNQsybBjidq8zVJiahQ?cluster=devnet), в которой сохранён `withdraw` из недели 10. Из депозита в 8 тестовых токенов сначала выведено 3, затем оставшиеся 5. Попытка вывода нуля отклонена, балансы не изменились. После второго вывода баланс хранилища и баланс долей равны нулю.
+
+[Подписи и балансы](../08-week11-clmm/evidence/devnet-withdraw.json) и [скрипт проверки](../08-week11-clmm/verify-withdraw-devnet.mjs).
 
 В Solana Explorer транзакция вывода содержит один вызов верхнего уровня к нашей программе `Simple Vault`, внутри которого отображаются две внутренние инструкции (`Inner Instructions`):
 - `Instruction 1.1: TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA (SPL Token Program)` - `Burn` (сжигание `shares_amount` share-токенов).

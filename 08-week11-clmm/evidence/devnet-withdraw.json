@@ -1,0 +1,21 @@
+{
+  "network": "devnet",
+  "program": "EGrtYqUVMoRxGbQj6YT5KhYNTdNQsybBjidq8zVJiahQ",
+  "mint": "H84mS2or848CP2VnF93LUXxgs8yh42ZwDY6RZoEng2Mq",
+  "vault": "pH7Skt6JD7L8Df3FZbGSn9HK4M8zMrNUwQvQSfcKsFt",
+  "init": "3Y9J4L2ybmZHC2FjWMsDwnwXPP8jHVp3XENJ9LvZDMZ3nmspRG4SNZX8RP6GUnF96zaBPU7Cq7QfpPVFebhMiJ9i",
+  "deposit": "2eRXfpthRAXZWGUA6W1cR9SE1J3bt5JUYYCzQNbKZYnkBF8ZFZNm3mFTG44nZXpEHf2w5araCDqudkVBbY4dQArt",
+  "withdraw": "2cuvF1CtFDLNnz3Q5kGdViURBbTL477GMRE1Q9nuEqLeayQZjkgK4sxk6oMwcVvJhH2zPSGCwbpa3EjVLVMPJ5wv",
+  "recover": "63mtv8JumgNLJBTxqXUZvS5sbJsYMt9wBMxgHULAwHWEoVdoenB6Sh6QBVLAek5d1WFgEY8y96UaNqBodxPFr5ic",
+  "slot": 525357781,
+  "cpis": [
+    {
+      "type": "burn",
+      "amount": "3000000"
+    },
+    {
+      "type": "transfer",
+      "amount": "3000000"
+    }
+  ]
+}

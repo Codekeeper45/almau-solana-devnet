@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Full autonomous Devnet pipeline for Week 9 Simple Vault:
-1. Setup keypairs in ~/.hermes/secrets/almau-solana-week9/
+1. Setup keypairs in ~/.config/solana/week9/
 2. Update declare_id! in lib.rs
 3. Build SBF via api.solpg.io
 4. Deploy SBF to Devnet using BPFLoaderUpgradeable with fast parallel chunk writing
@@ -19,8 +19,8 @@ from solders.hash import Hash
 
 ROOT = Path(__file__).resolve().parent
 RPC = 'https://api.devnet.solana.com'
-PAYER_FILE = Path('/home/hermes/.hermes/secrets/almau-solana-devnet.json')
-SECRETS_DIR = Path('/home/hermes/.hermes/secrets/almau-solana-week9')
+PAYER_FILE = Path(os.environ.get("ANCHOR_WALLET", "~/.config/solana/id.json")).expanduser()
+SECRETS_DIR = Path(os.environ.get("VAULT_KEYS_DIR", "~/.config/solana/week9")).expanduser()
 SECRETS_DIR.mkdir(parents=True, exist_ok=True, mode=0o700)
 os.chmod(SECRETS_DIR, 0o700)
 

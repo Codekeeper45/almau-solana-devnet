@@ -1,5 +1,5 @@
-import sys
-sys.path.insert(0,"/home/hermes/projects/almau-solana-rk1")
+import os,sys
+sys.path.insert(0,os.path.expanduser('~/projects/almau-solana-rk1'))
 import json,struct,base64,time
 from pathlib import Path
 from solders.pubkey import Pubkey

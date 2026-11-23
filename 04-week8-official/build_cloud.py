@@ -1,6 +1,6 @@
-import sys,json,re,hashlib,requests
+import os,sys,json,re,hashlib,requests
 from pathlib import Path
-sys.path.insert(0,'/home/hermes/projects/almau-solana-rk1')
+sys.path.insert(0,os.path.expanduser('~/projects/almau-solana-rk1'))
 from devnet_work import key
 root=Path(__file__).parent
 out=root/'evidence';out.mkdir(exist_ok=True)

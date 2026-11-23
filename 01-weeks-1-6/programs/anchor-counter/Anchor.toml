@@ -3,11 +3,11 @@ seeds = false
 skip-lint = false
 
 [programs.devnet]
-anchor_counter = "Fg6PaFpoGXkYsidMpWxTWqkZ8q7kL6K2f3d9c8P4v1A"
+anchor_counter = "BPj5PmjBAaCB2W5MYTiRip3ktFYNgWSUmHKNhzQmySVD"
 
 [provider]
 cluster = "Devnet"
-wallet = "../../private/student.json"
+wallet = "~/.config/solana/id.json"
 
 [workspace]
 members = ["programs/anchor-counter"]
@@ -17,4 +17,4 @@ anchor_version = "0.31.1"
 solana_version = "2.3.0"
 
 [scripts]
-test = "node ../../clients/counter/test.mjs"
+test = "cargo test"

@@ -6,7 +6,7 @@
 
 ## Проверено в Solana Devnet
 
-Токен и метаданные успешно созданы и зафиксированы ончейн:
+Токен и метаданные созданы в Devnet:
 
 - **Mint:** [`G77KQEeVfvh1zbF9pBkH71iEbyEYkMvZhBCsGUeA44fe`](https://explorer.solana.com/address/G77KQEeVfvh1zbF9pBkH71iEbyEYkMvZhBCsGUeA44fe?cluster=devnet)
 - **Metadata Account:** [`F5xsxQN9j5MJmX4D5ogA81Die6SU9eADGCc6NPW4ABb2`](https://explorer.solana.com/address/F5xsxQN9j5MJmX4D5ogA81Die6SU9eADGCc6NPW4ABb2?cluster=devnet)
@@ -24,4 +24,4 @@
 4. **Создание ончейн-метаданных (CreateMetadataAccountV3):**
    [`3WHTfuPWphSSXDpCMfEpUf3LmJgjwVnYNCSCp6axf546UyaCEFajqaXMGsdJEFdidPhbCB7Npak85UgsB1acPbuw`](https://explorer.solana.com/tx/3WHTfuPWphSSXDpCMfEpUf3LmJgjwVnYNCSCp6axf546UyaCEFajqaXMGsdJEFdidPhbCB7Npak85UgsB1acPbuw?cluster=devnet)
 
-Файл свидетельств: `evidence/week7-devnet.json`. Все критерии полностью подтверждены через RPC.
+Все подписи и адреса: `evidence/week7-devnet.json`.

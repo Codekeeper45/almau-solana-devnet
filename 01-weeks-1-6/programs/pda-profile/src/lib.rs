@@ -1,5 +1,5 @@
 use anchor_lang::prelude::*;
-declare_id!("Fg6PaFpoGXkYsidMpWxTWqkZ8q7kL6K2f3d9c8P4v1B");
+declare_id!("22NbKaaD3vLDEAi3jxM9FzwJdAJXR5kBzSmfq2mJi7AM");
 #[program]
 pub mod pda_profile {
     use super::*;

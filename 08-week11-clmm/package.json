@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "scripts": {"create-pool": "node create-pool.mjs", "verify": "node verify.mjs", "test": "node --test"},
+  "scripts": {"create-pool": "node create-pool.mjs", "verify": "node verify.mjs", "test": "node --test devnet.test.mjs"},
   "dependencies": {"@raydium-io/raydium-sdk-v2":"0.2.41-alpha","@solana/spl-token":"0.4.14","@solana/web3.js":"1.98.4","decimal.js":"10.6.0"}
 }

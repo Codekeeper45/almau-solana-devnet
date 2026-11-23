@@ -1,6 +1,6 @@
-import sys,json,hashlib,struct,base64
+import os,sys,json,hashlib,struct,base64
 from pathlib import Path
-sys.path.insert(0,'/home/hermes/projects/almau-solana-rk1')
+sys.path.insert(0,os.path.expanduser('~/projects/almau-solana-rk1'))
 from devnet_work import rpc,key
 from deploy_devnet import send,payer
 from solders.pubkey import Pubkey as P

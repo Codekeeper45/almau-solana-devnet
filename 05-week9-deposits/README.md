@@ -16,7 +16,7 @@ fee_wallet нельзя подменить при депозите. Провер
 
 ## Проверено в Solana Devnet
 
-Программа развёрнута в официальной сети Solana Devnet (BPFLoaderUpgradeable), инициализирована и протестирована реальной транзакцией депозита:
+Программа задеплоена в Devnet, vault создан, депозит проходит:
 
 - **Program ID:** [`A3wEuZYxJDy5kENCvsEj7JjcjjX4Ejm5nxhQVuXHzeud`](https://explorer.solana.com/address/A3wEuZYxJDy5kENCvsEj7JjcjjX4Ejm5nxhQVuXHzeud?cluster=devnet)
 - **Token Mint:** [`4oDpT49f5SEzjU69vef2ZtoHfs21ydy72EnvrvJzLp2n`](https://explorer.solana.com/address/4oDpT49f5SEzjU69vef2ZtoHfs21ydy72EnvrvJzLp2n?cluster=devnet)
@@ -30,7 +30,7 @@ fee_wallet нельзя подменить при депозите. Провер
    [`nk4euN3Zf11jYuWkFJBdEtxArJgWYaxEqS8CfjuX1zsuDXaLNHF1LZ5qgACnqtk4mZ4hVLL9FQzkMFiLzmp8FMy`](https://explorer.solana.com/tx/nk4euN3Zf11jYuWkFJBdEtxArJgWYaxEqS8CfjuX1zsuDXaLNHF1LZ5qgACnqtk4mZ4hVLL9FQzkMFiLzmp8FMy?cluster=devnet)
 2. **Создание карточки пользователя (create_user_card):**
    [`3Ntz93JQBiuK9qTSWeJY75a1TfxvJm85EFaxSq2tQiVbKkNxgLMbdg5SMdW8DomD7rYWPFe8fd9FWRVzUULiLaD6`](https://explorer.solana.com/tx/3Ntz93JQBiuK9qTSWeJY75a1TfxvJm85EFaxSq2tQiVbKkNxgLMbdg5SMdW8DomD7rYWPFe8fd9FWRVzUULiLaD6?cluster=devnet)
-3. **Реальный депозит (deposit):**
+3. **Депозит (deposit):**
    [`4EsAmwBdCgHdkZaKmnTb2MVFdoeLvjqtwSyh1jDGtPkZxzdRnatEXMiVyugfNLK9UmxCWSgCRmfyJ5qhU2LMzLCJ`](https://explorer.solana.com/tx/4EsAmwBdCgHdkZaKmnTb2MVFdoeLvjqtwSyh1jDGtPkZxzdRnatEXMiVyugfNLK9UmxCWSgCRmfyJ5qhU2LMzLCJ?cluster=devnet)
 
 Параметры транзакции депозита:
@@ -49,7 +49,7 @@ fee_wallet нельзя подменить при депозите. Провер
 
 ## Локальная регрессия (LiteSVM)
 
-Скомпилированный SBF исполняется также в LiteSVM с настоящими CPI в SPL Token.
+Ту же собранную программу гонял локально в LiteSVM вместе с SPL Token.
 Команда запуска:
 ```bash
 python test_svm.py
@@ -64,4 +64,4 @@ python test_svm.py
 - Три последовательных депозита трёх пользователей (100, 200, 300 токенов), начисление долей 1/6, 1/3, 1/2 и удержание 1% комиссии.
 - Запрет закрытия карточки с ненулевым балансом долей.
 - Откат состояния при превышении баланса.
-Все 19 сценариев успешно пройдены.
+Все 19 сценариев проходят.

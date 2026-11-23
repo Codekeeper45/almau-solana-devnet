@@ -60,8 +60,8 @@ def send(payer, signers, instructions):
 def main():
     ap=argparse.ArgumentParser()
     ap.add_argument("--metadata-uri",required=True,help="Public HTTPS URI of uploaded metadata JSON")
-    ap.add_argument("--payer",type=Path,default=Path.home()/".hermes/secrets/almau-solana-devnet.json")
-    ap.add_argument("--keys-dir",type=Path,default=Path.home()/".hermes/secrets/almau-solana-week7")
+    ap.add_argument("--payer",type=Path,default=Path.home()/".config/solana/id.json")
+    ap.add_argument("--keys-dir",type=Path,default=Path.home()/".config/solana/week7")
     ap.add_argument("--name",default="AlmaU Week 7 Demo Token")
     ap.add_argument("--symbol",default="AW7")
     ap.add_argument("--decimals",type=int,default=6)
